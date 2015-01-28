@@ -6,9 +6,10 @@ import com.Ex4.api.tdd.DBSingleton;
 import com.Ex4.api.tdd.Photo;
 import com.Ex4.api.tdd.User;
 import com.Ex4.api.tdd.UserService;
+import com.Ex4.api.tdd.UserServiceFactory;
 import com.Ex4.api.tdd.UserServiceImp;
 
-public class TestProxy {
+public class TestWithFactory {
 
 	@org.junit.Test
 	public void testAddToDB() {
@@ -19,7 +20,7 @@ public class TestProxy {
 		user2.setName("Perry");
 		user2.setPassword("password");
 		
-		UserService service = new UserServiceImp();
+		UserService service = UserServiceFactory.getLocalService();
 		
 		service.addUser(user1);
 		service.addUser(user2);
@@ -37,7 +38,7 @@ public class TestProxy {
 		user2.setName("Perry");
 		user2.setPassword("password");
 		
-		UserService service = new UserServiceImp();
+		UserService service = UserServiceFactory.getLocalService();
 		
 		service.addUser(user1);
 		service.addUser(user2);
@@ -55,7 +56,7 @@ public class TestProxy {
 		user1.setName("John");
 		user1.setPassword("123456");
 		
-		UserService service = new UserServiceImp();
+		UserService service = UserServiceFactory.getLocalService();
 		
 		service.addUser(user1);
 		
@@ -66,15 +67,6 @@ public class TestProxy {
 	}
 	
 	@org.junit.Test
-	public void testGetAllDB() {
-		/* TODO
-		public void addPhoto(User u, Photo p);
-	public void addFriend(User u1, User u2);
-	public void likePhoto(User u, Photo p);
-		*/
-	}
-	
-	@org.junit.Test
 	public void testAddPhoto(){
 		User user1 = new User(1);
 		user1.setName("John");
@@ -82,7 +74,7 @@ public class TestProxy {
 		Photo p = new Photo("path", user1);
 		
 		
-		UserService service = new UserServiceImp();
+		UserService service = UserServiceFactory.getLocalService();
 		
 		service.addUser(user1);
 		service.uploadPhoto(user1, p);
@@ -102,7 +94,7 @@ public class TestProxy {
 		user2.setName("Perry");
 		user2.setPassword("password");
 		
-		UserService service = new UserServiceImp();
+		UserService service = UserServiceFactory.getLocalService();
 		
 		service.addUser(user1);
 		service.addFriend(user1, user2);
@@ -117,7 +109,7 @@ public class TestProxy {
 		user1.setPassword("123456");
 		Photo p = new Photo("path", user1);
 		
-		UserService service = new UserServiceImp();
+		UserService service = UserServiceFactory.getLocalService();
 		
 		service.addUser(user1);
 		service.uploadPhoto(user1, p);

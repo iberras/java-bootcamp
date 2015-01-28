@@ -9,7 +9,7 @@ import java.util.List;
  */
 
 public class UserServiceProxy implements UserService {  
-    UserService implementation;  
+    private final UserService implementation;  
   
     public UserServiceProxy(UserService imp) {  
         this.implementation = imp;  

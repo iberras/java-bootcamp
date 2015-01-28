@@ -85,28 +85,6 @@ public class TestDB {
 	}
 	
 	@org.junit.Test
-	public void testGetAllDB() {
-		/* TODO
-		User user3 = new User(3);
-		user3.setName("Johnn");
-		user3.setPassword("1234567");
-		User user4 = new User(4);
-		user4.setName("Perry");
-		user4.setPassword("password");
-		
-		DBSingleton db = DBSingleton.getinstance();
-		db.addUser(user3);
-		db.addUser(user4);
-		
-		db.deleteUser(user3);
-		db.deleteUser(user4);
-		
-		assertEquals(user3, db.getAllUsers().iterator().next());
-		*/
-	}
-	
-	
-	@org.junit.Test
 	public void testPhotoCreation(){
 		User user = new User(1);
 		user.setName("John");

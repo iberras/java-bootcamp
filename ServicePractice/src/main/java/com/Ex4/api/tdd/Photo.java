@@ -13,7 +13,7 @@ import java.util.List;
 public class Photo {
 	private final String path;
 	private final User propetary;
-	private List<User> likes;
+	private final List<User> likes;
 	
 	public Photo(String path, User propetary){
 		this.path = path;

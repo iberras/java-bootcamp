@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ShoppingCart {
 
-	private List<Item> items;
+	private final List<Item> items;
 	private Payment payment;
 	
 	public ShoppingCart(){
@@ -20,7 +20,7 @@ public class ShoppingCart {
 		try{
 			return items.get(index);
         }
-        catch(IndexOutOfBoundsException e){
+        catch(Exception e){
             return null;
         }
 		
