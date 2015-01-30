@@ -12,9 +12,8 @@ import java.sql.Statement;
 import java.util.Date;
 
 public class DBManager {
-	private static final String newLine = System.getProperty("line.separator");
 	private static Connection connection;
-
+	private static final String newLine = System.getProperty("line.separator");
 	public void connect() throws ClassNotFoundException, SQLException {
 		String driverName = "org.gjt.mm.mysql.Driver";
 	    Class.forName(driverName);
@@ -80,7 +79,7 @@ public class DBManager {
 	public static String percentageOfStudentsPassed(String course) throws SQLException{
 		Statement statement = connection.createStatement();
 		ResultSet queryResult = statement.executeQuery("SELECT AVG(a.scount) as average "
-													   +"FROM (select count(*) as scount "
+													   +"FROM (select count(1) as scount "
 													   +"from Notas, Course, Student "
 													   +"where (Notas.idCourse = Course.idCourse)and (Course.name = \""+course+"\") and (Student.registrationNumber = Notas.idStudent) "
 													   +"and (Notas.finalNote >= 4) GROUP BY Course.name) a;"); 

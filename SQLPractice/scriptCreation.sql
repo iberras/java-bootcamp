@@ -1,7 +1,7 @@
 CREATE DATABASE IF NOT EXISTS `high-schoolDB`;
 USE `high-schoolDB`;
 CREATE TABLE IF NOT EXISTS `Schedule` (
-  `idSchedule` int(11) NOT NULL,
+  `idSchedule` INT(11) NOT NULL AUTO_INCREMENT,
   `HourStart` datetime NOT NULL,
   `HourEnd` datetime NOT NULL,
   PRIMARY KEY (`idSchedule`)
@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `Schedule` (
 CREATE TABLE IF NOT EXISTS `Student` (
   `firstName` varchar(60) NOT NULL,
   `lastName` varchar(60) NOT NULL,
-  `registrationNumber` int(11) NOT NULL,
+  `registrationNumber` INT(11) NOT NULL AUTO_INCREMENT,
   `dateOfBirth` date NOT NULL,
   PRIMARY KEY (`registrationNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -17,15 +17,15 @@ CREATE TABLE IF NOT EXISTS `Teacher` (
   `firstName` varchar(60) NOT NULL,
   `lastName` varchar(60) NOT NULL,
   `dateOfBirth` date NOT NULL,
-  `id` int(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `Course` (
-  `idCourse` int(11) NOT NULL,
+  `idCourse` INT(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(60) NOT NULL,
   `idAssignedTeacher` int(11) NOT NULL,
   `hoursByWeek` int(11) NOT NULL,
-  `idSchedule` int(11) NOT NULL,
+  `idSchedule` INT(11) NOT NULL,
   PRIMARY KEY (`idCourse`),
   KEY `idTeacherAssigned_idx` (`idAssignedTeacher`),
   KEY `Schedule_idx` (`idSchedule`),
@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS `Course` (
   CONSTRAINT `Teacher` FOREIGN KEY (`idAssignedTeacher`) REFERENCES `Teacher` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `Notas` (
-  `idStudent` int(11) NOT NULL,
-  `idCourse` int(11) NOT NULL,
+  `idStudent` INT(11) NOT NULL,
+  `idCourse` INT(11) NOT NULL,
   `year` year(4) NOT NULL,
   `partialNote1` decimal(10,0) unsigned DEFAULT NULL,
   `partialNote2` decimal(10,0) DEFAULT NULL,
