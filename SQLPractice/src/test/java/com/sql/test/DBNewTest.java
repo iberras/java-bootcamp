@@ -14,6 +14,7 @@ public class DBNewTest {
 	@Test
 	public void testTeacherWithNewDesign() throws Exception{
 		ConnectionManager manager = ConnectionManager.getInstance();
+		manager.getConnection();
 		manager.loadFile("scriptCreation.sql");
 		TeacherDAO teacherDAO = TeacherDAOFactory.getTeacherDAO("mysql");
 		System.out.println(teacherDAO.getSchedule(1));
