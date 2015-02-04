@@ -2,12 +2,12 @@ package com.Ex4.api.tests;
 
 import static org.junit.Assert.*;
 
-import com.Ex4.api.tdd.DBSingleton;
 import com.Ex4.api.tdd.Photo;
 import com.Ex4.api.tdd.User;
 import com.Ex4.api.tdd.UserService;
 import com.Ex4.api.tdd.UserServiceFactory;
 import com.Ex4.api.tdd.UserServiceImp;
+import com.service.meeting.DBSingleton;
 
 public class TestWithFactory {
 

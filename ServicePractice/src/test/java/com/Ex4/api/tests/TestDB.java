@@ -2,9 +2,9 @@ package com.Ex4.api.tests;
 
 import static org.junit.Assert.*;
 
-import com.Ex4.api.tdd.DBSingleton;
 import com.Ex4.api.tdd.Photo;
 import com.Ex4.api.tdd.User;
+import com.service.meeting.DBSingleton;
 
 public class TestDB {
 
