@@ -47,7 +47,7 @@ exercises**
 
     * [Topic 5: SQL - MySql](#topic-5-sql---mysql-1-day)
 
-    * [Topic 6: Sprint Core & REST](#topic-6-sprint-core--rest-3-day)
+    * [Topic 6: Spring Core & REST](#topic-6-spring-core--rest-3-day)
 
     * [Topic 7: Hibernate](#topic-7-orm-1-day)
   
@@ -325,7 +325,7 @@ Commit your practice code.
   * If the row-length is 3 and the input string is "a b c d e f", the result should be "a b", "c d", "e f"
   * If the row-length is 5 and the input string is "Excelent", the result should be "Excel", "ent"
 
-3. Use TDD to grow the 'Recent file list' behaviour. Some examples of this behaviour is:
+3. Use TDD to create the 'Recent file list' behaviour. Some examples of this behaviour is:
   * When the program is run for the first time, the list is empty.
   * When a file is opened, it is added to the recent file list.
   * If an opened file already exists in the recent file list, it is bumped to the top, not duplicated in the list.
@@ -366,7 +366,7 @@ Commit your practice code.
 #####Practice:#####
 
 1. Create a shopping cart API spec
-2. Implement the previous shopping cart using spring 4 & TDD.
+2. Implement the previous shopping cart using TDD.
 3. Document endpoints
 4. Design a UserService for CRUD operations.
 5. Implement and document previous UserService.
@@ -420,7 +420,7 @@ Commit your practice code.
         Students:
           <last-name>, <first-name> (ordered by alphabetically by last name)
 
-5. List final course notes for a given student (the input could be last name or the registration number). They should be ordered by highest notes and course name)
+5. List final course notes for a given student (the input should be the registration number). They should be ordered by highest notes and course name)
 6. Percentage of students that passed/failed a given course.
 7. For a given teacher, list the timeline for each course that he is assigned to (ordered by date), and the course name. The format should be:
 
@@ -449,7 +449,7 @@ Commit your practice code.
 → [index](#index)
 
 
-####Topic 6: Sprint Core & REST (3 day)####
+####Topic 6: Spring Core & REST (3 day)####
 
 #####Reading:#####
 1. [Quick guide](http://www.tutorialspoint.com/spring/spring_quick_guide.htm)
