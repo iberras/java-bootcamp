@@ -2,6 +2,8 @@ package com.Ex4.api.tdd;
 
 import java.util.List;
 
+import com.service.meeting.DBSingleton;
+
 /**
  * 
  * Teh local implementation of the service
