@@ -2,20 +2,38 @@ package com.entities.impl;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+
 import com.entities.ShoppingCartEntry;
 
+@Repository
 public class ShoppingCartEntryDAOMySQLImp implements ShoppingCartEntryDAO {
+	
+	@PersistenceContext
+	private EntityManager entityManager;
+
 
 	@Override
 	public void addItem(int idUser, int idItem, int quantity) {
-		// TODO Auto-generated method stub
+		ShoppingCartEntry entry = new ShoppingCartEntry();
+		entry.setIdUser(idUser);
+		entry.setIdItem(idItem);
+		entry.setQuantity(quantity);
+		entityManager.getTransaction().begin();
+		entityManager.persist(entry);
+		entityManager.getTransaction().commit();
 
 	}
 
 	@Override
 	public void updateItemQuantity(int idUser, int idItem, int quantity) {
-		// TODO Auto-generated method stub
-
+		ShoppingCartEntry entry = entityManager.find(ShoppingCartEntry.class, idUser);
+		entityManager.getTransaction().begin();
+		entry.setQuantity(quantity);
+		entityManager.getTransaction().commit();
 	}
 
 	@Override

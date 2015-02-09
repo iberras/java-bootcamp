@@ -16,6 +16,7 @@ public class OrderDAOMySQLImp implements OrderDAO {
 	@Override
 	public Order createOrder(int idUser) {
 		Order order = new Order();
+		order.setIdUser(idUser);
 		entityManager.getTransaction().begin();
 		entityManager.persist(order);
 		entityManager.getTransaction().commit();
