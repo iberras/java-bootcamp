@@ -17,20 +17,17 @@ import com.entities.StockDAO;
 @Service
 public class ShoppingServiceImpl implements ShoppingService{
 	
-	//@Autowired
+	@Autowired
 	private ItemDAO itemDAO;
 	
-	//@Autowired
+	@Autowired
 	private OrderDAO orderDAO;
 	
-	//@Autowired
+	@Autowired
 	private OrderEntryDAO orderEntryDAO;
 	
-	//@Autowired
+	@Autowired
 	private ShoppingCartEntryDAO shoppingCartEntryDAO;
-	
-	//@Autowired
-	private StockDAO stockDAO;
 	
 	
 	@Override
