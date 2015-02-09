@@ -2,17 +2,17 @@ package com.entities;
 
 public class Category {
 	private int idCategory;
-	private int name;
+	private String name;
 	public int getIdCategory() {
 		return idCategory;
 	}
 	public void setIdCategory(int idCategory) {
 		this.idCategory = idCategory;
 	}
-	public int getName() {
+	public String getName() {
 		return name;
 	}
-	public void setName(int name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.entities.User;
-import com.entities.UserDAO;
+import com.entities.impl.UserDAO;
 import com.rest.UserService;
 
 @Service

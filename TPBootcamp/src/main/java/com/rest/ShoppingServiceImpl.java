@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.entities.Item;
-import com.entities.ItemDAO;
 import com.entities.Order;
-import com.entities.OrderDAO;
-import com.entities.OrderEntryDAO;
 import com.entities.ShoppingCartEntry;
-import com.entities.ShoppingCartEntryDAO;
-import com.entities.StockDAO;
+import com.entities.impl.ItemDAO;
+import com.entities.impl.OrderDAO;
+import com.entities.impl.OrderEntryDAO;
+import com.entities.impl.ShoppingCartEntryDAO;
+import com.entities.impl.StockDAO;
 
 @Service
 public class ShoppingServiceImpl implements ShoppingService{

@@ -9,7 +9,6 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 
 import com.entities.User;
-import com.entities.UserDAO;
 
 @Repository
 public class UserMySQLImp implements UserDAO{
