@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.javabootcamp</groupId>
-	<artifactId>Topic7</artifactId>
+	<artifactId>TPFinal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -20,7 +20,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>com.topic7.Topic7Application</start-class>
+		<start-class>com.rest.Application</start-class>
 		<java.version>1.8</java.version>
 	</properties>
 
