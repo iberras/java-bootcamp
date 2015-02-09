@@ -12,7 +12,6 @@ import com.entities.impl.ItemDAO;
 import com.entities.impl.OrderDAO;
 import com.entities.impl.OrderEntryDAO;
 import com.entities.impl.ShoppingCartEntryDAO;
-import com.entities.impl.StockDAO;
 
 @Service
 public class ShoppingServiceImpl implements ShoppingService{
