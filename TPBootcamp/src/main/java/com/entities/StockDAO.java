@@ -1,4 +1,4 @@
-package com.entities.impl;
+package com.entities;
 
 public class StockDAO {
 

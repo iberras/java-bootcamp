@@ -1,4 +1,4 @@
-package com.services;
+package com.rest;
 
 import java.util.List;
 

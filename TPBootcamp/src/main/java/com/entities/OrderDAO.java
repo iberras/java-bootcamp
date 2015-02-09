@@ -1,6 +1,5 @@
-package com.entities.impl;
+package com.entities;
 
-import com.entities.Order;
 
 public class OrderDAO {
 

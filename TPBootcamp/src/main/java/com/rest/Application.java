@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.entities.User;
+import com.entities.impl.UserMySQLImp;
 import com.services.UserServiceImpl;
 
 
@@ -24,6 +25,10 @@ public class Application {
     	    	System.out.println("Facu se logeo");
     	    else
     	    	System.out.println("Facu NO SE LOGEO");
-
+    	    
+    	    List<User> users = userManager.getAllUsers();
+    	    
+    	    System.out.println(users.size());
+    	    
     }
 }

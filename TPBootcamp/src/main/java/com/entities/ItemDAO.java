@@ -1,8 +1,6 @@
-package com.entities.impl;
+package com.entities;
 
 import java.util.List;
-
-import com.entities.Item;
 
 public class ItemDAO {
 
